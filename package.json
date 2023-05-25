@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "main": "app.js",
+  "type": "commonjs",
   "scripts": {
+    "format:check": "prettier --check",
     "start": "nodemon --exec babel-node src/app.js"
   },
   "dependencies": {
@@ -20,7 +22,16 @@
     "@babel/plugin-transform-modules-commonjs": "^7.21.5",
     "@babel/preset-env": "^7.21.5",
     "dotenv": "^16.0.3",
+    "eslint": "^8.41.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "prettier-eslint": "^15.0.1"
   }
 }
