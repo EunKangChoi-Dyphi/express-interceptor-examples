@@ -64,3 +64,27 @@ log(
     )
   )
 );
+
+const go = (...args) => {
+  reduce((arg, func) => func(arg), args);
+};
+
+go(
+  0,
+  (a) => a + 1,
+  (a) => a + 10,
+  (a) => a + 100,
+  log
+);
+
+const pipe =
+  (func, ...funcs) =>
+  (...as) =>
+    go(func(...as), ...funcs);
+
+const f = pipe(
+  (a, b) => a + b,
+  (a) => a + 10,
+  (a) => a + 100,
+  log
+);
